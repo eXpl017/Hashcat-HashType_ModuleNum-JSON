@@ -26,7 +26,7 @@ if tables:
             cells = row.find_all(['th', 'td'])
 
             # {hash_type: hash_module_num}
-            table_dict[cells[1].get_text(strip=True)] = cells[0].get_text(strip=True)
+            table_dict[cells[1].get_text(strip=True)] = int(cells[0].get_text(strip=True))
 
 else:
     print(f'No tables with given attributes on page, check page source for table attr check.')
